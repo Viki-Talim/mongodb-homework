@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Izmeni vino</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <h1>Izmeni <%= wine.ime %></h1>
+    
+    <form action="/update-wine/<%= wine._id %>" method="POST">
+        <label>Ime:</label>
+        <input type="text" name="ime" value="<%= wine.ime %>" required>
+        
+        <label>Vinarija:</label>
+        <input type="text" name="vinarija" value="<%= wine.vinarija %>">
+        
+        <label>Cena:</label>
+        <input type="number" name="cena" value="<%= wine.cena %>">
+        
+        <label>Opis:</label>
+        <input type="text" name="opis" value="<%= wine.opis %>"/>
+        
+        <button type="submit">Zachuvaj promeni</button>
+        <a class="cancel-link" href="/wines">Otkazi</a>
+    </form>
+</body>
+</html>

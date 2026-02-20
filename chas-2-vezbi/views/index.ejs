@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <h2>Add new wine</h2>
+<form action="/add-wine" method="POST">
+    <input type="text" name="ime" placeholder="Ime" required />
+    <input type="text" name="vinarija" placeholder="Vinarija" required />
+    <input type="number" name="cena" placeholder="Cena" required />
+        <input type="text" name="opis" placeholder="Opis" required />
+
+    <button type="submit">Zachuvaj</button>
+</form>
+<hr>
+ <div class="wine-list">
+    <% wines.forEach(wine => { %>
+        <div class="wine-card">
+            <h3><%= wine.ime %></h3>
+            <p class="vinarija">Vinarija: <%= wine.vinarija %></p>
+            <p class="price">Cena: <%= wine.cena %> den</p>
+                        <p class="wine-description">Opis: <%= wine.opis %></p>
+
+            
+            <div class="actions">
+                <form action="/delete-wine/<%= wine._id %>" method="POST">
+                    <button class="delete-btn">Izbrishi</button>
+                </form>
+                
+                <a href="/edit-wine/<%= wine._id %>" class="edit-btn">Izmeni</a>
+            </div>
+        </div>
+    <% }) %>
+</div>
+
+</body>
+</html>
