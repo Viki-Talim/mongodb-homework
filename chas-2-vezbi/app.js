@@ -11,7 +11,7 @@ app.use(express.static("public"));
 
 mongoose
   .connect(
-    "mongodb+srv://Vicky:baktalim9@cluster0.7fu7yux.mongodb.net/semos1?appName=Cluster0",
+    "mongodb+srv://Vicky:<UR PASWORD></PASWORD>@cluster0.7fu7yux.mongodb.net/semos1?appName=Cluster0",
   )
   .then(() => {
     console.log("Successfully connected");

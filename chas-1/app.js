@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 mongoose
-  .connect("mongodb+srv://Vicky:baktalim9@cluster0.7fu7yux.mongodb.net/semos1?appName=Cluster0")
+  .connect("mongodb+srv://Vicky:<UR PASWORD></pASWORD>>@cluster0.7fu7yux.mongodb.net/semos1?appName=Cluster0")
   .then(() => {
     console.log("Succesfully conected");
   })
